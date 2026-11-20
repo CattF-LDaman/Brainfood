@@ -1,0 +1,17 @@
+[project]
+name = "brainfood"
+version = "0.1.0"
+description = "Jupyter notebooks exploring ML, deep learning, and data science on real data"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab",
+    "ipykernel",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+]
+
+[tool.uv]
+package = false

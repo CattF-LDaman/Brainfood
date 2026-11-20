@@ -2,14 +2,15 @@
 
 Explorations in machine learning, deep learning, and data science on real datasets—mostly via Jupyter notebooks.
 
-## Setup
+## Setup (`uv`)
+
+Uses **[uv](https://docs.astral.sh/uv/)** and a committed **`uv.lock`**.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python -m ipykernel install --user --name brainfood
-jupyter lab
+cd Brainfood
+uv sync
+uv run python -m ipykernel install --user --name brainfood
+uv run jupyter lab
 ```
 
-Notebooks live under `notebooks/`.
+Notebooks live under `notebooks/`. Add packages with `uv add <package>` (updates `pyproject.toml` and `uv.lock`).
